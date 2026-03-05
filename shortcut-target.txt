@@ -1,0 +1,1 @@
+powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File "%USERPROFILE%\Documents\windows-scripting\RestoreWin10Explorer.ps1"
