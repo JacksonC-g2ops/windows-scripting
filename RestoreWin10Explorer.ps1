@@ -12,7 +12,7 @@
     License: MIT
 #>
 
-# 1. Dynamically find the Documents folder (handles OneDrive or Local automatically)
+# 1. Dynamically find the Documents folder
 $targetPath = [Environment]::GetFolderPath("MyDocuments")
 
 try {
