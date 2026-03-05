@@ -8,7 +8,7 @@
     It dynamically locates the user's OneDrive Documents folder.
 
 .NOTES
-    Author: Your GitHub Name
+    Author: JacksonC-g2ops
     License: MIT
 #>
 
@@ -22,8 +22,7 @@ try {
     $cpProcess = Start-Process "control.exe" -WindowStyle Minimized -PassThru
     
     # 3. Wait for the shell to register the new window
-    # Increase this value (e.g., to 1200) if the script fails on slower hardware
-    Start-Sleep -Milliseconds 1000
+    Start-Sleep -Milliseconds 500
 
     # 4. Access the Windows Shell COM Object
     $shellApp = New-Object -ComObject Shell.Application
@@ -42,8 +41,4 @@ try {
 }
 catch {
     Write-Host "An unexpected error occurred: $($_.Exception.Message)" -ForegroundColor Red
-}
-finally {
-    # Optional: Brief pause if running manually to see status
-    # Start-Sleep -Seconds 1
 }
