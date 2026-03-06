@@ -13,7 +13,7 @@
 #>
 
 # 1. Dynamically find the Documents folder
-$targetPath = [Environment]::GetFolderPath("MyDocuments")
+$targetPath = "$env:USERPROFILE\Documents"
 
 try {
     Write-Host "Initializing Legacy Explorer Shell..." -ForegroundColor Cyan
